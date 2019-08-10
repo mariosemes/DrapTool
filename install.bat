@@ -64,63 +64,62 @@ if %selection%==6 call :uninstall
 
 :everything
 if %files%=="moved" (
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_image.reg"
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_favicon.reg"
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_video.reg"
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
-    goto :begin
+    echo Files already exists.
 ) else (
     call :copyfiles
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_image.reg"
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_favicon.reg"
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_video.reg"
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
-    goto :begin
 )
+REGEDIT.EXE  /S  "C:\DrapTool\installation\install_image.reg"
+REGEDIT.EXE  /S  "C:\DrapTool\installation\install_favicon.reg"
+REGEDIT.EXE  /S  "C:\DrapTool\installation\install_video.reg"
+REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
+call C:\DrapTool\RenderSearch.bat
+goto :begin
+
 
 
 :image
 if %files%=="moved" (
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_image.reg"
-    goto :begin
+    echo Files already exists.
 ) else (
     call :copyfiles
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_image.reg"
-    goto :begin
 )
+REGEDIT.EXE  /S  "C:\DrapTool\installation\install_image.reg"
+goto :begin
+
 
 
 :favicon
 if %files%=="moved" (
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_favicon.reg"
-    goto :begin
+    echo Files already exists.
 ) else (
     call :copyfiles
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_favicon.reg"
-    goto :begin
 )
+REGEDIT.EXE  /S  "C:\DrapTool\installation\install_favicon.reg"
+goto :begin
+
 
 
 :video
 if %files%=="moved" (
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_video.reg"
-    goto :begin
+    echo Files already exists.
 ) else (
     call :copyfiles
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_video.reg"
-    goto :begin
 )
+REGEDIT.EXE  /S  "C:\DrapTool\installation\install_video.reg"
+goto :begin
+
 
 
 :aerender
 if %files%=="moved" (
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
-    goto :begin
+    echo Files already exists.
 ) else (
     call :copyfiles
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
-    goto :begin
 )
+REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
+call C:\DrapTool\RenderSearch.bat
+goto :begin
+
 
 
 :uninstall
