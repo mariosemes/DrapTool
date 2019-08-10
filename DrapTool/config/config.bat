@@ -30,3 +30,6 @@ set secs=%time:~6,2%
 if "%secs:~0,1%" == " " set secs=0%secs:~1,1%
 echo secs=%secs%
 set timestamp=%hour%h%min%m%secs%s
+
+rem Remove "rem" from the next line if you want to add your custom path to aerender.exe
+rem set aerender="C:\Program Files\Adobe\Adobe After Effects CC 2019\Support Files\aerender.exe"

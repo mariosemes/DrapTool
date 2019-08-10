@@ -71,11 +71,17 @@ if %files%=="moved" (
 REGEDIT.EXE  /S  "C:\DrapTool\installation\install_image.reg"
 REGEDIT.EXE  /S  "C:\DrapTool\installation\install_favicon.reg"
 REGEDIT.EXE  /S  "C:\DrapTool\installation\install_video.reg"
-REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
+
 call C:\DrapTool\RenderSearch.bat
+call C:\DrapTool\config\config.bat
+if not defined aerender (
+    cls
+    echo Missing aerender.exe, Plugin will not be installed.
+    pause
+) else (
+    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
+)
 goto :begin
-
-
 
 :image
 if %files%=="moved" (
@@ -116,8 +122,15 @@ if %files%=="moved" (
 ) else (
     call :copyfiles
 )
-REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
 call C:\DrapTool\RenderSearch.bat
+call C:\DrapTool\config\config.bat
+if not defined aerender (
+    cls
+    echo Missing aerender.exe, Plugin will not be installed.
+    pause
+) else (
+    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
+)
 goto :begin
 
 
