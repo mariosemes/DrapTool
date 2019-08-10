@@ -30,3 +30,6 @@ set secs=%time:~6,2%
 if "%secs:~0,1%" == " " set secs=0%secs:~1,1%
 echo secs=%secs%
 set timestamp=%hour%h%min%m%secs%s
+
+rem Aerender.exe file location
+set aerender="C:\Program Files\Adobe\Adobe After Effects CC 2019\Support Files\aerender.exe"

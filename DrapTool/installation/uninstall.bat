@@ -55,5 +55,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explore
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\mp4toogg" /f
 reg delete "HKEY_CLASSES_ROOT\*\shell\DrapTool ANYtoMP4" /f
 reg delete "HKEY_CLASSES_ROOT\*\shell\DrapTool Favicon" /f
+reg delete "HKEY_CLASSES_ROOT\*\shell\DrapTool Render" /f
+
 
 

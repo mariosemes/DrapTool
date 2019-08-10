@@ -1,0 +1,24 @@
+Windows Registry Editor Version 5.00
+
+
+[HKEY_CLASSES_ROOT\*\shell\DrapTool Render]
+"MUIVerb"="Render File"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+"SubCommands"="lossless;converting"
+"AppliesTo"=".aep"
+"SeparatorAfter"=""
+"SeparatorBefore"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\lossless]
+@="Render Lossless AVI"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\lossless\command]
+@="\"C:\\DrapTool\\DrapToolAeRender.bat\" \"%1\" \"false\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\converting]
+@="Render MP4"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\converting\command]
+@="\"C:\\DrapTool\\DrapToolAeRender.bat\" \"%1\" \"true\""

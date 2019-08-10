@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+
+[HKEY_CLASSES_ROOT\*\shell\DrapTool Favicon]
+@="Create Favicon pack (512x512)"
+"icon"="C:\\DrapTool\\drap-icon.ico"
+"AppliesTo"="System.FileName:\"*.jpg\" OR System.FileName:\"*.jpeg\" OR System.FileName:\"*.png\""
+"SeparatorBefore"=""
+"SeparatorAfter"=""
+
+[HKEY_CLASSES_ROOT\*\shell\DrapTool Favicon\command]
+@="\"C:\\DrapTool\\DrapToolFavicon.bat\" \"%1\""
