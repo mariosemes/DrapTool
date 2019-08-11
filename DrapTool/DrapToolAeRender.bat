@@ -20,6 +20,11 @@ rem Extracting info from given path
 rem -------------------------------
 call :file_path aeppath %aepfilelocation%
 
+if not exist %aeppath%exported (
+    mkdir %aeppath%exported
+) else (
+    echo folder exported exists
+)
 
 if %convert%=="false" (
 	echo Converting disabled
@@ -37,18 +42,18 @@ rem --------------------------------
 rem Rendering lossless avi from file
 rem --------------------------------
 :lossless
-%aerender% -project %aepfilelocation% -comp "%composition%" -RStemplate "Best Settings" -v "ERRORS_AND_PROGRESS" -mp -output "%aeppath%%composition%.avi"
+%aerender% -project %aepfilelocation% -comp "%composition%" -RStemplate "Best Settings" -v "ERRORS_AND_PROGRESS" -mp -output "%aeppath%exported\%composition%.avi"
 goto :eof
 
 rem ----------------------
 rem Converting file to mp4
 rem ----------------------
 :converting
-%scriptpath%\library\ffmpeg.exe -i "%aeppath%%composition%.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "%aeppath%%composition%.mp4"
+%scriptpath%\library\ffmpeg.exe -i "%aeppath%exported\%composition%.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "%aeppath%exported\%composition%.mp4"
 rem ---------------------
 rem Deleting old AVI file
 rem ---------------------
-del "%aeppath%%composition%.avi"
+del "%aeppath%exported\%composition%.avi"
 goto :eof
 
 
