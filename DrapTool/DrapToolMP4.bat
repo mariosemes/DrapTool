@@ -93,15 +93,24 @@ if not exist %filepath%%outputfolder% (
 )
 goto :eof
 
-
 :fileexistscheck
-if not exist %filepath%%outputfolder%\%filewithoutextension%.%filetype% (
+if not exist %filepath%%outputfolder%\%filewithoutextension%.mp4 (
 	set outputname="%filepath%%outputfolder%\%filename%"
+	goto :eof
 ) else (
-	set outputname="%filepath%%outputfolder%\%filewithoutextension%_%timestamp%.%filetype%"
+	set /A counter=1
+	call :filecounter
+	goto :eof
 )
-goto :eof
 
+:filecounter
+if not exist %filepath%%outputfolder%\%filewithoutextension%_(%counter%).mp4 (
+	set outputname="%filepath%%outputfolder%\%filewithoutextension%_(%counter%).mp4"
+	goto :eof
+) else (
+	set /a counter+=1
+	goto :filecounter
+)
 
 
 rem -----------------------
@@ -125,5 +134,5 @@ rem -----------------------
 rem Where the magic happens
 rem -----------------------
 :anyfileconvert
-%scriptpath%\library\ffmpeg.exe -n -i "%filelocation%" %ENCODER% "%filepath%%outputfolder%\%filewithoutextension%.mp4"
+%scriptpath%\library\ffmpeg.exe -n -i "%filelocation%" %ENCODER% %outputname%
 goto :eof
