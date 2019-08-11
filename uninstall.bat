@@ -24,7 +24,9 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 ::--------------------------------------
 
-@RD /S /Q "C:\DrapTool"
+set scriptlocation=C:\DrapTool
+call %scriptlocation%\installation\uninstall.bat
+@RD /S /Q "%scriptlocation%"
 
-call DrapTool\installation\uninstall.bat
+
 
