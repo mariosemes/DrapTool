@@ -10,7 +10,7 @@ rem -----------------------
 rem Getting input parameter
 rem -----------------------
 cls
-set aepfilelocation=%1
+set filelocation=%1
 set convert=%2
 
 set /p composition=Type composition name: 
@@ -18,13 +18,13 @@ set /p composition=Type composition name:
 rem -------------------------------
 rem Extracting info from given path
 rem -------------------------------
-call :file_path aeppath %aepfilelocation%
+call %scriptpath%\PathExtractor.bat filepath %filelocation% file_path
 
 rem -----------------------------------------
 rem Checking if folder exists, if not, create
 rem -----------------------------------------
-if not exist %aeppath%exported (
-    mkdir %aeppath%exported
+if not exist %filepath%exported (
+    mkdir %filepath%exported
 ) else (
     echo folder exported exists
 )
@@ -45,29 +45,17 @@ rem --------------------------------
 rem Rendering lossless avi from file
 rem --------------------------------
 :lossless
-%aerender% -project %aepfilelocation% -comp "%composition%" -RStemplate "Best Settings" -v "ERRORS_AND_PROGRESS" -mp -output "%aeppath%exported\%composition%.avi"
+%aerender% -project %filelocation% -comp "%composition%" -RStemplate "Best Settings" -v "ERRORS_AND_PROGRESS" -mp -output "%filepath%exported\%composition%.avi"
 goto :eof
 
 rem ----------------------
 rem Converting file to mp4
 rem ----------------------
 :converting
-%scriptpath%\library\ffmpeg.exe -i "%aeppath%exported\%composition%.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "%aeppath%exported\%composition%.mp4"
+%scriptpath%\library\ffmpeg.exe -i "%filepath%exported\%composition%.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "%filepath%exported\%composition%.mp4"
 rem ---------------------
 rem Deleting old AVI file
 rem ---------------------
-del "%aeppath%exported\%composition%.avi"
+del "%filepath%exported\%composition%.avi"
 goto :eof
-
-
-rem --------------------
-rem Extracting file path
-rem --------------------
-:file_path <resultVar> <pathVar>
-    (
-        cls
-        set "%~1=%~dp2"
-        exit /b
-    )
-    goto :eof
 

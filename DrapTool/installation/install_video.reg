@@ -14,21 +14,21 @@ Windows Registry Editor Version 5.00
 "Icon"="C:\\DrapTool\\drap-icon.ico"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\optimp4\command]
-@="\"C:\\DrapTool\\DrapToolMP4size.bat\" \"%1\""
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"mp4\""
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\mp4towebm]
 @="Convert MP4 to WEBM"
 "Icon"="C:\\DrapTool\\drap-icon.ico"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\mp4towebm\command]
-@="\"C:\\DrapTool\\DrapToolMP4toWEBM.bat\" \"%1\""
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"webm\""
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\mp4toogg]
 @="Convert MP4 to OGG"
 "Icon"="C:\\DrapTool\\drap-icon.ico"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\mp4toogg\command]
-@="\"C:\\DrapTool\\DrapToolMP4toOGG.bat\" \"%1\""
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"ogg\""
 
 
 
@@ -40,4 +40,4 @@ Windows Registry Editor Version 5.00
 "SeparatorBefore"=""
 
 [HKEY_CLASSES_ROOT\*\shell\DrapTool ANYtoMP4\command]
-@="\"C:\\DrapTool\\DrapToolANYtoMP4.bat\" \"%1\""
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"any\""

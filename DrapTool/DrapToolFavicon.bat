@@ -23,18 +23,18 @@ rem -----------------------
 cls
 set filelocation=%1
 
-call :file_path filepath %filelocation%
-call :file_extension detectext %filelocation%
+call %scriptpath%\PathExtractor.bat filepath %filelocation% file_path
+call %scriptpath%\PathExtractor.bat fileextension %filelocation% file_extension
 
-if %detectext%==.jpg (
+if %fileextension%==.jpg (
     echo its JPG
     set fileext=.jpg
     goto :converter
-) else if %detectext%==.jpeg (
+) else if %fileextension%==.jpeg (
     echo its JPEG
     set fileext=.jpg
     goto :converter
-) else if %detectext%==.png (
+) else if %fileextension%==.png (
     echo its PNG
     set fileext=.png
     goto :converter
@@ -74,29 +74,3 @@ rem -----------------------
 	set size=%*
 	%scriptpath%\library\magick.exe convert -background transparent "%filelocation%" -resize %size% "%filepath%\favicon\favicon.ico"
 	goto :eof
-
-
-
-rem ----------------------------
-rem Removing extension from file
-rem ----------------------------
-:file_extension <resultVar> <pathVar>
-    (
-        set "%~1=%~x2"
-        exit /b
-    )
-    goto :eof
-
-
-rem --------------------
-rem Extracting file path
-rem --------------------
-:file_path <resultVar> <pathVar>
-    (
-        set "%~1=%~dp2"
-        exit /b
-    )
-    goto :eof
-
-
-

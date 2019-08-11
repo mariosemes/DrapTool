@@ -37,15 +37,15 @@ rem where the magic happens
 rem -----------------------
 :optimization
 
-	call :file_path filepath %filelocation%
-	call :file_name filename %filelocation%
-	call :file_ext filewithoutext %filelocation%
+	call %scriptpath%\PathExtractor.bat filepath %filelocation% file_path
+	call %scriptpath%\PathExtractor.bat filename %filelocation% file_name
+	call %scriptpath%\PathExtractor.bat filewithoutextension %filelocation% file_ext
 
 	if exist "%~1" (2>nul pushd "%~1" && (goto :batch) || goto :single ) else set "type=INVALID"
 
 	:single
 
-		%app% %settings% "%filepath%\%filename%" %outputsett% "%filepath%\%filewithoutext%-%quality%.%filetype%"
+		%app% %settings% "%filepath%\%filename%" %outputsett% "%filepath%\%filewithoutextension%-%quality%.%filetype%"
 		echo %name% optimized
 		goto :eof
 
@@ -73,33 +73,3 @@ rem ------------------------------------------
 	) else (
 		echo folder optimized-%quality% exists
 	)
-
-rem --------------------
-rem Extracting file path
-rem --------------------
-:file_path <resultVar> <pathVar>
-	(
-	    set "%~1=%~dp2"
-	    exit /b
-	)
-	goto :eof
-
-rem --------------------
-rem Extracting file name
-rem --------------------
-:file_name <resultVar> <pathVar>
-	(
-	    set "%~1=%~nx2"
-	    exit /b
-	)
-	goto :eof
-
-rem -----------------------
-rem Removing file extension
-rem -----------------------
-:file_ext <resultVar> <pathVar>
-	(
-	    set "%~1=%~n2"
-	    exit /b
-	)
-	goto :eof
