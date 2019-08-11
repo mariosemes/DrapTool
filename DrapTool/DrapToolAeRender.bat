@@ -20,6 +20,9 @@ rem Extracting info from given path
 rem -------------------------------
 call :file_path aeppath %aepfilelocation%
 
+rem -----------------------------------------
+rem Checking if folder exists, if not, create
+rem -----------------------------------------
 if not exist %aeppath%exported (
     mkdir %aeppath%exported
 ) else (
