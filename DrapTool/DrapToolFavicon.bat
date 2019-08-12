@@ -1,5 +1,4 @@
 @echo off
-rem setlocal enabledelayedexpansion enableextensions
 
 rem ------------------------
 rem loading config if needed
@@ -22,9 +21,10 @@ rem Getting input parameter
 rem -----------------------
 cls
 set filelocation=%1
+set filelocation=%filelocation:"=%
 
-call %scriptpath%\PathExtractor.bat filepath %filelocation% file_path
-call %scriptpath%\PathExtractor.bat fileextension %filelocation% file_extension
+call %scriptpath%\PathExtractor.bat filepath "%filelocation%" file_path
+call %scriptpath%\PathExtractor.bat fileextension "%filelocation%" file_extension
 
 if %fileextension%==.jpg (
     echo its JPG
@@ -53,24 +53,29 @@ rem -----------------------
     for /f "tokens=*" %%c in (%scriptpath%\files\mstile.txt) do call :createmstile %%c
     for /f "tokens=*" %%d in (%scriptpath%\files\ico.txt) do call :createico %%d
     copy "%scriptpath%\files\code.txt" "%filepath%\favicon\code.txt"
-    goto :efo
+    echo favicon\code.txt generated
+    goto :eof
 
 :createapple-touch-icon
 	set size=%*
 	%scriptpath%\library\magick.exe convert "%filelocation%" -resize %size% "%filepath%\favicon\apple-touch-icon-%size%%fileext%"
+    echo favicon\apple-touch-icon-%size%%fileext% generated
 	goto :eof
 
 :createfavicon
 	set size=%*
 	%scriptpath%\library\magick.exe convert "%filelocation%" -resize %size% "%filepath%\favicon\favicon-%size%%fileext%"
+    echo favicon\favicon-%size%%fileext% generated
 	goto :eof
 
 :createmstile
 	set size=%*
 	%scriptpath%\library\magick.exe convert "%filelocation%" -resize %size% "%filepath%\favicon\mstile-%size%%fileext%"
+    echo favicon\mstile-%size%%fileext% generated
 	goto :eof
 
 :createico
 	set size=%*
 	%scriptpath%\library\magick.exe convert -background transparent "%filelocation%" -resize %size% "%filepath%\favicon\favicon.ico"
+    echo favicon\favicon.ico generated
 	goto :eof
