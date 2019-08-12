@@ -10,14 +10,12 @@ if defined p (
 	echo. >> C:\DrapTool\config\config.bat
 	echo rem Aerender.exe file location >> C:\DrapTool\config\config.bat
 	echo set aerender="%p%" >> C:\DrapTool\config\config.bat
-	echo Moved files to config
-	pause
-	goto :eof
 ) else (
 	echo File not found! Trying one more time!
 	TIMEOUT /T 3
-	goto :secondtry
+	call :secondtry
 )
+goto :eof
 
 :secondtry
 cls
@@ -29,8 +27,7 @@ if defined p (
 	echo. >> C:\DrapTool\config\config.bat
 	echo rem Aerender.exe file location >> C:\DrapTool\config\config.bat
 	echo set aerender="%p%" >> C:\DrapTool\config\config.bat
-	goto :eof
 ) else (
 	echo File not found!
-	goto :eof
 )
+goto :eof
