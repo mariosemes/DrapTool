@@ -4,7 +4,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\DrapTool Edit MP4]
 "MUIVerb"="Edit MP4 file"
 "Icon"="C:\\DrapTool\\drap-icon.ico"
-"SubCommands"="optimp4;mp4toogg;mp4towebm"
+"SubCommands"="mp4toogg;mp4towebm"
 "AppliesTo"=".mp4"
 "SeparatorAfter"=""
 "SeparatorBefore"=""
