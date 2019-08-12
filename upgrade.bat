@@ -30,7 +30,7 @@ mkdir %temp%\DrapToolUpgrade
 set uplocation=%temp%\DrapToolUpgrade
 echo Upgrade Location created
 
-C:\tools\wget.exe -P "%uplocation%" https://raw.githubusercontent.com/mariosemes/DrapTool/master/DrapTool/version.txt
+C:\DrapTool\library\wget.exe -P "%uplocation%" https://raw.githubusercontent.com/mariosemes/DrapTool/master/DrapTool/version.txt
 TIMEOUT 5
 findstr /vig:C:\DrapTool\version.txt %uplocation%\version.txt > %uplocation%\upgrade.txt
 
@@ -56,10 +56,10 @@ if %fileIsBlank% gtr 0 (
 
 :upgrade
 rem Download new master from GIT
-C:\tools\wget.exe -P "%uplocation%" https://github.com/mariosemes/DrapTool/archive/master.zip 
+C:\DrapTool\library\wget.exe -P "%uplocation%" https://github.com/mariosemes/DrapTool/archive/master.zip 
 
 rem Extracting master
-C:\tools\7z.exe x -o"%uplocation%" "%uplocation%\master.zip" 
+C:\DrapTool\library\7z.exe x -o"%uplocation%" "%uplocation%\master.zip" 
 
 rem Copy uninstall.bat from installation
 xcopy /s C:\DrapTool\installation\uninstall.bat %uplocation%
