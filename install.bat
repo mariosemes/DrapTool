@@ -33,28 +33,8 @@ if not exist C:\DrapTool\config\config.bat (
     set files="moved"
 )
 
-cls
-echo.
-echo     ____                 ______            __
-echo    / __ \_________ _____/_  __/___  ____  / /
-echo   / / / / ___/ __ `/ __ \/ / / __ \/ __ \/ / 
-echo  / /_/ / /  / /_/ / /_/ / / / /_/ / /_/ / /  
-echo /_____/_/   \__,_/ .___/_/  \____/\____/_/   
-echo                 /_/                          
-echo.
-echo.
-echo Installation packs:
-echo.
-echo (1) Install
-echo (2) Uninstall
-echo.
-set /p selection=Please select installation pack: 
-
-if %selection%==1 goto :everything
-if %selection%==2 goto :uninstall
 
 :everything
-
 if %files%=="moved" (
     goto :continue
 ) else (
@@ -79,17 +59,6 @@ if not defined aerender (
 ) else (
     REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
     goto :eof
-)
-
-
-:uninstall
-if %files%=="moved" (
-    call uninstall.bat
-    goto :eof
-) else (
-    echo DrapTool not installed or missing files on C:
-    pause
-    goto :begin
 )
 
 
