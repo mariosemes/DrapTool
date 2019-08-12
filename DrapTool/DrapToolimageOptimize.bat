@@ -19,7 +19,7 @@ rem checking what file type it is and redirecting to section
 rem --------------------------------------------------------
 if %filetype%=="png" (
 	set app=%scriptpath%\library\pngquant.exe
-	set settings=--force --verbose --quality=%quality%
+	set settings=--nofs --speed 1 --quality %quality% --strip
 	set outputsett=--output
 	goto :optimization
 ) else if %filetype%=="jpg" (

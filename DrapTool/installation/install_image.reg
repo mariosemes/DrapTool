@@ -20,14 +20,14 @@ Windows Registry Editor Version 5.00
 "Icon"="C:\\DrapTool\\drap-icon.ico"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\pngbest\command]
-@="\"C:\\DrapTool\\DrapToolimageOptimize.bat\" \"%V\" \"45-60\" \"png\""
+@="\"C:\\DrapTool\\DrapToolimageOptimize.bat\" \"%V\" \"97\" \"png\""
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\png10]
-@="Quality 0-10%"
+@="Quality 5-10%"
 "Icon"="C:\\DrapTool\\drap-icon.ico"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\png10\command]
-@="\"C:\\DrapTool\\DrapToolimageOptimize.bat\" \"%V\" \"0-10\" \"png\""
+@="\"C:\\DrapTool\\DrapToolimageOptimize.bat\" \"%V\" \"5-10\" \"png\""
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\png20]
 @="Quality 10-20%"
