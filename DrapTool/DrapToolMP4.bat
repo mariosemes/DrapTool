@@ -12,6 +12,7 @@ rem -----------------------
 cls
 set filelocation=%1
 set filetype=%2
+set crf=%3
 
 rem -------------------------------
 rem Extracting info from given path
@@ -117,7 +118,7 @@ rem -----------------------
 rem Where the magic happens
 rem -----------------------
 :mp4optimize
-%scriptpath%\library\ffmpeg.exe -n -i "%filelocation%" -vcodec libx264 -crf %mp4quality% -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" %outputname%
+%scriptpath%\library\ffmpeg.exe -n -i "%filelocation%" -vcodec libx264 -crf %crf% -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" %outputname%
 goto :eof
 
 

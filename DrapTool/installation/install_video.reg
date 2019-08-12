@@ -9,13 +9,6 @@ Windows Registry Editor Version 5.00
 "SeparatorAfter"=""
 "SeparatorBefore"=""
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\optimp4]
-@="Optimize MP4"
-"Icon"="C:\\DrapTool\\drap-icon.ico"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\optimp4\command]
-@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"mp4\""
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\mp4towebm]
 @="Convert MP4 to WEBM"
 "Icon"="C:\\DrapTool\\drap-icon.ico"
@@ -41,3 +34,75 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\*\shell\DrapTool ANYtoMP4\command]
 @="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"any\""
+
+
+
+[HKEY_CLASSES_ROOT\*\shell\DrapTool Optimize MP4]
+"MUIVerb"="Optimize MP4"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+"SubCommands"="crflowinfo;crf30;crf28;crf26;crf24;crf22;crf20;crf18;crf16;crfhighinfo"
+"AppliesTo"=".mp4"
+"SeparatorAfter"=""
+"SeparatorBefore"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crflowinfo]
+@="Info: Smaller File Size"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crfhighinfo]
+@="Info: Bigger File Size"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf16]
+@="CRF 16"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf16\command]
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"mp4\" \"16\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf18]
+@="CRF 18"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf18\command]
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"mp4\" \"18\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf20]
+@="CRF 20"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf20\command]
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"mp4\" \"20\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf22]
+@="CRF 22"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf22\command]
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"mp4\" \"22\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf24]
+@="CRF 24"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf24\command]
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"mp4\" \"24\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf26]
+@="CRF 26"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf26\command]
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"mp4\" \"26\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf28]
+@="CRF 28"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf28\command]
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"mp4\" \"28\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf30]
+@="CRF 30"
+"Icon"="C:\\DrapTool\\drap-icon.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\crf30\command]
+@="\"C:\\DrapTool\\DrapToolMP4.bat\" \"%1\" \"mp4\" \"30\""

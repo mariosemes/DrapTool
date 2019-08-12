@@ -1,9 +1,6 @@
 rem General settings
 set scriptpath=C:\DrapTool
 
-rem Set the quality output for MP4 optimizarion
-set mp4quality=24
-
 rem Video converter settings for MP4 to WEBM
 set mp4towebm=-c:v libvpx -crf 10 -b:v 1M -c:a libvorbis
 
@@ -22,7 +19,3 @@ set mkvtomp4=-codec copy
 
 rem Remove "rem" from the next line if you want to add your custom path to aerender.exe
 rem set aerender="C:\Program Files\Adobe\Adobe After Effects CC 2019\Support Files\aerender.exe"
-
- 
-rem Aerender.exe file location 
-set aerender="C:\Program Files\Adobe\Adobe After Effects CS6\Support Files\aerender.exe" 
