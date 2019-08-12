@@ -78,10 +78,10 @@ if not defined aerender (
     echo Missing aerender.exe, Plugin installed but please edit the aerender path in the config file
     REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
     pause
-    goto :begin
+    goto :eof
 ) else (
     REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
-    goto :begin
+    goto :eof
 )
 
 
