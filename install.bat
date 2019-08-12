@@ -1,4 +1,5 @@
 @echo off
+setlocal enabledelayedexpansion
 :: BatchGotAdmin
 ::-------------------------------------
 REM  --> Check for permissions
@@ -24,14 +25,6 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 ::--------------------------------------
 
-set upgrade=%1
-
-if %upgrade%=="true" (
-    call :everything
-    goto :eof
-) else (
-    goto :begin
-)
 
 :begin
 if not exist C:\DrapTool\config\config.bat (
@@ -53,7 +46,6 @@ echo.
 echo Installation packs:
 echo.
 echo (1) Install
-echo.
 echo (2) Uninstall
 echo.
 set /p selection=Please select installation pack: 
@@ -64,23 +56,34 @@ if %selection%==2 call :uninstall
 :everything
 if %files%=="moved" (
     echo Files already exists.
+    goto :continue
 ) else (
     call :copyfiles
+    goto :continue
 )
+
+:continue
 REGEDIT.EXE  /S  "C:\DrapTool\installation\install_image.reg"
 REGEDIT.EXE  /S  "C:\DrapTool\installation\install_favicon.reg"
 REGEDIT.EXE  /S  "C:\DrapTool\installation\install_video.reg"
 
+TIMEOUT 5
+
 call C:\DrapTool\RenderSearch.bat
+echo Render file found
+pause
 call C:\DrapTool\config\config.bat
-if not defined aerender (
-    cls
-    echo Missing aerender.exe, Plugin installed but please edit the aerender path in the config file
+echo Config file loaded
+pause
+
+if defined aerender (
     REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
-    pause
     goto :eof
 ) else (
+    cls
+    echo Missing aerender.exe, Plugin installed but edit the aerender path in the config file
     REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
+    pause
     goto :eof
 )
 

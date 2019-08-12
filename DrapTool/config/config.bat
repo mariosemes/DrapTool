@@ -16,6 +16,5 @@ set movtomp4=-vcodec h264 -acodec mp2
 rem Video converter settings for MKV to MP4
 set mkvtomp4=-codec copy
 
-
 rem Remove "rem" from the next line if you want to add your custom path to aerender.exe
 rem set aerender="C:\Program Files\Adobe\Adobe After Effects CC 2019\Support Files\aerender.exe"
