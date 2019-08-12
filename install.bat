@@ -37,9 +37,13 @@ if not exist C:\DrapTool\config\config.bat (
 :everything
 if %files%=="moved" (
     goto :continue
+    start "" https://github.com/mariosemes/DrapTool#draptool-for-windows
+    exit /b
 ) else (
     call :copyfiles
-    goto :continue
+    call :continue
+    start "" https://github.com/mariosemes/DrapTool#draptool-for-windows
+    exit /b
 )
 
 
