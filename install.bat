@@ -24,9 +24,16 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 ::--------------------------------------
 
+set upgrade=%1
+
+if %upgrade%=="true" (
+    call :everything
+    goto :eof
+) else (
+    goto :begin
+)
 
 :begin
-
 if not exist C:\DrapTool\config\config.bat (
     set files="notmoved"
 ) else (
@@ -45,22 +52,14 @@ echo.
 echo.
 echo Installation packs:
 echo.
-echo (1) Image optimization
-echo (2) Favicon generator
-echo (3) Video optimization and Converting
-echo (4) AErender for After Effects
-echo (5) Install everything
+echo (1) Install
 echo.
-echo (6) Uninstall app
+echo (2) Uninstall
 echo.
 set /p selection=Please select installation pack: 
 
-if %selection%==1 call :image
-if %selection%==2 call :favicon
-if %selection%==3 call :video
-if %selection%==4 call :aerender
-if %selection%==5 call :everything
-if %selection%==6 call :uninstall
+if %selection%==1 call :everything
+if %selection%==2 call :uninstall
 
 :everything
 if %files%=="moved" (
@@ -84,61 +83,6 @@ if not defined aerender (
     REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
     goto :begin
 )
-
-
-
-:image
-if %files%=="moved" (
-    echo Files already exists.
-) else (
-    call :copyfiles
-)
-REGEDIT.EXE  /S  "C:\DrapTool\installation\install_image.reg"
-goto :begin
-
-
-
-:favicon
-if %files%=="moved" (
-    echo Files already exists.
-) else (
-    call :copyfiles
-)
-REGEDIT.EXE  /S  "C:\DrapTool\installation\install_favicon.reg"
-goto :begin
-
-
-
-:video
-if %files%=="moved" (
-    echo Files already exists.
-) else (
-    call :copyfiles
-)
-REGEDIT.EXE  /S  "C:\DrapTool\installation\install_video.reg"
-goto :begin
-
-
-
-:aerender
-if %files%=="moved" (
-    echo Files already exists.
-) else (
-    call :copyfiles
-)
-call C:\DrapTool\RenderSearch.bat
-call C:\DrapTool\config\config.bat
-if not defined aerender (
-    cls
-    echo Missing aerender.exe, Plugin installed but please edit the aerender path in the config file
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
-    pause
-    goto :begin
-) else (
-    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
-    goto :begin
-)
-
 
 
 :uninstall

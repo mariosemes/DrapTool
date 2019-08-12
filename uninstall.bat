@@ -129,7 +129,6 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explore
 goto :eof
 
 :deletefolder
-call DrapTool\installation\uninstall.bat
 @RD /S /Q "C:\DrapTool"
 goto :eof
 
