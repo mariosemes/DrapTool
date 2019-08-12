@@ -103,10 +103,6 @@ if not exist "%filepath%%outputfolder%" (
 goto :eof
 
 :fileexistscheck
-echo prvi check
-echo "%filepath%%outputfolder%\%filewithoutextension%%fileextension%"
-pause
-
 if not exist "%filepath%%outputfolder%\%filewithoutextension%%fileextension%" (
 	set outputname="%filepath%%outputfolder%\%filename%"
 	goto :eof
@@ -117,13 +113,6 @@ if not exist "%filepath%%outputfolder%\%filewithoutextension%%fileextension%" (
 )
 
 :filecounter
-echo drugi check
-echo File path: %filepath%
-echo Output folder: %outputfolder%
-echo ----
-echo "%filepath%%outputfolder%\%filewithoutextension%_(%counter%)%fileextension%"
-pause
-
 if not exist "%filepath%%outputfolder%\%filewithoutextension%_(%counter%)%fileextension%" (
 	set outputname="%filepath%%outputfolder%\%filewithoutextension%_(%counter%)%fileextension%"
 	goto :eof
