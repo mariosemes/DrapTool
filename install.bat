@@ -76,12 +76,16 @@ call C:\DrapTool\RenderSearch.bat
 call C:\DrapTool\config\config.bat
 if not defined aerender (
     cls
-    echo Missing aerender.exe, Plugin will not be installed.
+    echo Missing aerender.exe, Plugin installed but please edit the aerender path in the config file
+    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
     pause
+    goto :begin
 ) else (
     REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
+    goto :begin
 )
-goto :begin
+
+
 
 :image
 if %files%=="moved" (
@@ -126,12 +130,14 @@ call C:\DrapTool\RenderSearch.bat
 call C:\DrapTool\config\config.bat
 if not defined aerender (
     cls
-    echo Missing aerender.exe, Plugin will not be installed.
+    echo Missing aerender.exe, Plugin installed but please edit the aerender path in the config file
+    REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
     pause
+    goto :begin
 ) else (
     REGEDIT.EXE  /S  "C:\DrapTool\installation\install_aerender.reg"
+    goto :begin
 )
-goto :begin
 
 
 
