@@ -1,4 +1,8 @@
 # DrapTool for Windows
+[![GitHub Release](https://github-basic-badges.herokuapp.com/release/mariosemes/DrapTool.svg)]()
+[![GitHub Download Count](https://github-basic-badges.herokuapp.com/downloads/mariosemes/DrapTool/total.svg)]()
+[![GitHub Issues Open](https://github-basic-badges.herokuapp.com/issues/mariosemes/DrapTool.svg)]()
+
 Easy image, video optimization / converting tool + Web Favicon generator for Windows.
 
 
