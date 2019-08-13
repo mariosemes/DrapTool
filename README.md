@@ -16,14 +16,6 @@ Easy image, video optimization / converting tool + Web Favicon generator for Win
 - [Web Favicon Generator](#web-favicon-generator)
 - [AE Render.exe Tool](#aerenderexe-tool)
 
-### Libraries used:
-Library | Website
---- | ---
-`7zip.exe` | [Visit website](https://www.7-zip.org/)
-`ffmpeg.exe` | [Visit website](https://ffmpeg.org/)
-`magick.exe` | [Visit website](https://imagemagick.org/index.php)
-`pngquant.exe` | [Visit website](https://pngquant.org/)
-`wget.exe` | [Visit website](https://eternallybored.org/misc/wget/)
 
 [back to top](#features)
 # Image Web Optimization
@@ -53,4 +45,12 @@ Library | Website
 # AErender.exe tool
 ##### Use the After Effects command line tool to export lossless .avi files and convert them to .mp4 with ffmpeg for the best result.
 
-**Work in progress**
+
+### Libraries used:
+Library | Website
+--- | ---
+`7zip.exe` | [Visit website](https://www.7-zip.org/)
+`ffmpeg.exe` | [Visit website](https://ffmpeg.org/)
+`magick.exe` | [Visit website](https://imagemagick.org/index.php)
+`pngquant.exe` | [Visit website](https://pngquant.org/)
+`wget.exe` | [Visit website](https://eternallybored.org/misc/wget/)
