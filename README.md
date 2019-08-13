@@ -1,6 +1,5 @@
 # DrapTool for Windows
-
-Windows Tool for image optimization and much more.
+Easy image, video optimization / converting tool + Web Favicon generator for Windows.
 
 # Features
 
