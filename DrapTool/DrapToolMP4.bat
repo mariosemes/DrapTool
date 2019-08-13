@@ -63,7 +63,7 @@ if %filetype%==mp4 (
 :anyfilechecker
 if %fileextension%==.avi (
 	set outputfolder=converted
-	set ENCODER="%avitomp4%"
+	set ENCODER=%avitomp4%
 	call :foldercheck
 	set fileextension=.mp4
 	call :fileexistscheck
@@ -71,7 +71,7 @@ if %fileextension%==.avi (
 	goto :eof
 ) else if %fileextension%==.mov (
 	set outputfolder=converted
-	set ENCODER="%movtomp4%"
+	set ENCODER=%movtomp4%
 	call :foldercheck
 	set fileextension=.mp4
 	call :fileexistscheck
@@ -79,7 +79,7 @@ if %fileextension%==.avi (
 	goto :eof
 ) else if %fileextension%==.mkv (
 	set outputfolder=converted
-	set ENCODER="%mkvtomp4%"
+	set ENCODER=%mkvtomp4%
 	call :foldercheck
 	set fileextension=.mp4
 	call :fileexistscheck
@@ -102,6 +102,7 @@ if not exist "%filepath%%outputfolder%" (
 )
 goto :eof
 
+
 :fileexistscheck
 if not exist "%filepath%%outputfolder%\%filewithoutextension%%fileextension%" (
 	set outputname="%filepath%%outputfolder%\%filename%"
@@ -111,6 +112,7 @@ if not exist "%filepath%%outputfolder%\%filewithoutextension%%fileextension%" (
 	call :filecounter
 	goto :eof
 )
+
 
 :filecounter
 if not exist "%filepath%%outputfolder%\%filewithoutextension%_(%counter%)%fileextension%" (
@@ -143,5 +145,5 @@ rem -----------------------
 rem Where the magic happens
 rem -----------------------
 :anyfileconvert
-%scriptpath%\library\ffmpeg.exe -n -i "%filelocation%" %ENCODER% -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" "%filepath%%outputfolder%\%filewithoutextension%.mp4"
+%scriptpath%\library\ffmpeg.exe -n -i "%filelocation%" %ENCODER% -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" "%filepath%%outputfolder%\%filewithoutextension%%fileextension%"
 goto :eof

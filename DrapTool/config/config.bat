@@ -8,7 +8,7 @@ rem Video converter settings for MP4 to ogg
 set mp4toogg=-c:v libtheora -q:v 7 -c:a libvorbis -q:a 4
 
 rem Video converter settings for AVI to MP4
-set avitomp4=-strict -2
+set avitomp4=-c:v libx264 -crf 19 -preset slow -c:a libfdk_aac -b:a 192k -ac 2
 
 rem Video converter settings for MOV to MP4
 set movtomp4=-vcodec h264 -acodec mp2
