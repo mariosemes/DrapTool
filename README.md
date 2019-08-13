@@ -3,12 +3,22 @@
 Windows Tool for image optimization and much more.
 
 # Features
-[Image Web Optimization](#image-web-optimization)
-- Image Web Optimization
-- Video Web Optimization
-- Video Converter
-- Web Favicon Generator
-- AE Render.exe Tool
+
+- [Image Web Optimization](#image-web-optimization)
+- [Video Web Optimization](#video-web-optimization)
+- [Video Converter](#video-converter)
+- [Web Favicon Generator](#web-favicon-generator)
+- [AE Render.exe Tool](#aerenderexe-tool)
+
+### Libraries used:
+Markdown | Less
+--- | ---
+`7zip.exe` | [Visit website](https://www.7-zip.org/)
+`ffmpeg.exe` | [Visit website](https://ffmpeg.org/)
+`magick.exe` | [Visit website](https://imagemagick.org/index.php)
+`pngquant.exe` | [Visit website](https://pngquant.org/)
+`wget.exe` | [Visit website](https://eternallybored.org/misc/wget/)
+
 
 # Image Web Optimization
 Compress Single or Batch JPG/PNG files with 1 click.
