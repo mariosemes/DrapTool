@@ -3,6 +3,7 @@ Easy image, video optimization / converting tool + Web Favicon generator for Win
 
 
 ## Download for Windows(64-bit)
+--- | ---
 `DrapTool-v1.2.zip` | [Download](https://github.com/mariosemes/DrapTool/releases/download/v1.2/DrapTool-v1.2.zip)
 `SourceCode.zip` | [Download](https://github.com/mariosemes/DrapTool/archive/v1.2.zip)
 `SourceCode.tar.gz` | [Download](https://github.com/mariosemes/DrapTool/archive/v1.2.tar.gz)
