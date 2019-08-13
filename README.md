@@ -11,7 +11,7 @@ Windows Tool for image optimization and much more.
 
 # Image Web Optimization
 Compress Single or Batch JPG/PNG files with 1 click.
-![optimization](/images/pngexp.png?raw=true)
+![optimization](https://github.com/mariosemes/DrapTool/tree/master/Images/pngexp.png?raw=true)
 
 # Video Web Optimization
 Compress MP4 videos to web perfect quality
