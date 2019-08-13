@@ -36,12 +36,14 @@ if not exist C:\DrapTool\config\config.bat (
 
 :everything
 if %files%=="moved" (
-    goto :continue
+    call :continue
+    call :librarydl
     start "" https://github.com/mariosemes/DrapTool#draptool-for-windows
     exit /b
 ) else (
     call :copyfiles
     call :continue
+    call :librarydl
     start "" https://github.com/mariosemes/DrapTool#draptool-for-windows
     exit /b
 )
@@ -69,6 +71,40 @@ if not defined aerender (
 :copyfiles
 mkdir C:\DrapTool
 xcopy DrapTool\* C:\DrapTool\* /E
+goto :eof
+
+
+:librarydl
+C:\DrapTool\library\wget.exe https://pngquant.org/pngquant-windows.zip
+C:\DrapTool\library\7z.exe x pngquant-windows.zip
+
+copy pngquant\pngquant.exe C:\DrapTool\library\
+
+del pngquant-windows.zip
+@RD /S /Q "pngquant"
+
+
+
+C:\DrapTool\library\wget.exe https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-4.2-win64-static.zip
+C:\DrapTool\library\7z.exe x ffmpeg-4.2-win64-static.zip
+
+copy ffmpeg-4.2-win64-static\bin\ffmpeg.exe C:\DrapTool\library\
+copy ffmpeg-4.2-win64-static\bin\ffplay.exe C:\DrapTool\library\
+copy ffmpeg-4.2-win64-static\bin\ffprobe.exe C:\DrapTool\library\
+
+del ffmpeg-4.2-win64-static.zip
+@RD /S /Q "ffmpeg-4.2-win64-static"
+
+
+
+C:\DrapTool\library\wget.exe https://imagemagick.org/download/binaries/ImageMagick-7.0.8-60-portable-Q16-x64.zip
+C:\DrapTool\library\7z.exe x -o"imagemagick" ImageMagick-7.0.8-60-portable-Q16-x64.zip
+
+copy imagemagick\magick.exe C:\DrapTool\library\
+
+del ImageMagick-7.0.8-60-portable-Q16-x64.zip
+@RD /S /Q "imagemagick"
+
 goto :eof
 
 
