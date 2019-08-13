@@ -3,10 +3,11 @@ Easy image, video optimization / converting tool + Web Favicon generator for Win
 
 ## Download for Windows(64-bit)
 
-[DrapTool-v1.2.zip](https://github.com/mariosemes/DrapTool/releases/download/v1.2/DrapTool-v1.2.zip)   ||   
-[Source Code .zip](https://github.com/mariosemes/DrapTool/archive/v1.2.zip)   ||   
-[Source Code .tar.gz](https://github.com/mariosemes/DrapTool/archive/v1.2.tar.gz)
-
+File | Download
+--- | ---
+`DrapTool-v1.2.zip` | [Download](https://github.com/mariosemes/DrapTool/releases/download/v1.2/DrapTool-v1.2.zip)
+`SourceCode.zip` | [Download](https://github.com/mariosemes/DrapTool/archive/v1.2.zip)
+`SourceCode.tar.gz` | [Download](https://github.com/mariosemes/DrapTool/archive/v1.2.tar.gz)
 
 # Features
 
@@ -17,7 +18,7 @@ Easy image, video optimization / converting tool + Web Favicon generator for Win
 - [AE Render.exe Tool](#aerenderexe-tool)
 
 ### Libraries used:
-Markdown | Less
+Library | Website
 --- | ---
 `7zip.exe` | [Visit website](https://www.7-zip.org/)
 `ffmpeg.exe` | [Visit website](https://ffmpeg.org/)
