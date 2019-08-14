@@ -45,7 +45,7 @@ rem --------------------------------
 rem Rendering lossless avi from file
 rem --------------------------------
 :lossless
-%aerender% -project %filelocation% -comp "%composition%" -RStemplate "Best Settings" -v "ERRORS_AND_PROGRESS" -mp -output "%filepath%exported\%composition%.avi"
+%aerender% -project %filelocation% -comp "%composition%" -RStemplate "Best Settings" -OMtemplate "Lossless" -v "ERRORS_AND_PROGRESS" -mp -output "%filepath%exported\%composition%.avi"
 goto :eof
 
 rem ----------------------
