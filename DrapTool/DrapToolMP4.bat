@@ -128,7 +128,7 @@ rem -----------------------
 rem Where the magic happens
 rem -----------------------
 :mp4optimize
-%scriptpath%\library\ffmpeg.exe -n -i "%filelocation%" -vcodec libx264 -crf %crf% -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" %outputname%
+%scriptpath%\library\ffmpeg.exe -n -i "%filelocation%" -vcodec libx264 -crf %crf% -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" "%outputname%"
 goto :eof
 
 
@@ -137,7 +137,7 @@ rem -----------------------
 rem Where the magic happens
 rem -----------------------
 :webmoggconvert
-%scriptpath%\library\ffmpeg.exe -n -i "%filelocation%" %ENCODER% -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" %outputname%
+%scriptpath%\library\ffmpeg.exe -n -i "%filelocation%" %ENCODER% -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" "%outputname%"
 goto :eof
 
 

@@ -23,8 +23,8 @@ call %scriptpath%\PathExtractor.bat filepath %filelocation% file_path
 rem -----------------------------------------
 rem Checking if folder exists, if not, create
 rem -----------------------------------------
-if not exist %filepath%exported (
-    mkdir %filepath%exported
+if not exist "%filepath%exported" (
+    mkdir "%filepath%exported"
 ) else (
     echo folder exported exists
 )
@@ -52,7 +52,7 @@ rem ----------------------
 rem Converting file to mp4
 rem ----------------------
 :converting
-%scriptpath%\library\ffmpeg.exe -i "%filepath%exported\%composition%.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "%filepath%exported\%composition%.mp4"
+%scriptpath%\library\ffmpeg.exe -i "%filepath%exported\%composition%.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -pix_fmt yuv420p "%filepath%exported\%composition%.mp4"
 rem ---------------------
 rem Deleting old AVI file
 rem ---------------------
