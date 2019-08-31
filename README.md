@@ -3,43 +3,43 @@
 [![GitHub Download Count](https://github-basic-badges.herokuapp.com/downloads/mariosemes/DrapTool/total.svg)]()
 [![GitHub Issues Open](https://github-basic-badges.herokuapp.com/issues/mariosemes/DrapTool.svg)]()
 
-Easy image, video optimization / converting tool + Web Favicon generator for Windows.
+Easy image, video optimisation / converting tool + Web Favicon generator for Windows.
 
 
 ## Download for Windows(64-bit) - [Releases page](https://github.com/mariosemes/DrapTool/releases/)
 
 # Features
 
-- [Image Web Optimization](#image-web-optimization)
-- [Video Web Optimization](#video-web-optimization)
+- [Image Web Optimisation](#image-web-optimisation)
+- [Video Web Optimisation](#video-web-optimisation)
 - [Video Converter](#video-converter)
 - [Web Favicon Generator](#web-favicon-generator)
 - [AE Render.exe Tool](#aerenderexe-tool)
 
 
 [back to top](#features)
-# Image Web Optimization
+# Image Web Optimisation
 ##### Compress Single or Batch JPG/PNG files with 1 click.
 
-![optimization](https://github.com/mariosemes/DrapTool/blob/master/Images/pngexp.gif?raw=true)
+![optimisation](https://github.com/mariosemes/DrapTool/blob/master/Images/pngexp.gif?raw=true)
 
 [back to top](#features)
-# Video Web Optimization
+# Video Web Optimisation
 ##### Compress MP4 videos to web perfect quality
 
-![optimization](https://github.com/mariosemes/DrapTool/blob/master/Images/mp4opti.gif?raw=true)
+![optimisation](https://github.com/mariosemes/DrapTool/blob/master/Images/mp4opti.gif?raw=true)
 
 [back to top](#features)
 # Video Converter
 ##### Convert .avi, .mkv, .mov to mp4 without quality loss.
 
-![optimization](https://github.com/mariosemes/DrapTool/blob/master/Images/avitomp4.gif?raw=true)
+![optimisation](https://github.com/mariosemes/DrapTool/blob/master/Images/avitomp4.gif?raw=true)
 
 [back to top](#features)
 # Web Favicon Generator
 ##### Create favicon pack with 20 resized images + html code included.
 
-![optimization](https://github.com/mariosemes/DrapTool/blob/master/Images/favicon.gif?raw=true)
+![optimisation](https://github.com/mariosemes/DrapTool/blob/master/Images/favicon.gif?raw=true)
 
 [back to top](#features)
 # AErender.exe tool
