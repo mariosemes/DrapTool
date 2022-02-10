@@ -42,12 +42,20 @@ cls
 echo DrapTool Optimize PNG uninstalled
 echo DrapTool Optimize JPG uninstalled
 echo DrapTool Edit MP4 uninstalled
+echo DrapTool Optimize MP4 uninstalled
+call :mp4remover3
+cls
+echo DrapTool Optimize PNG uninstalled
+echo DrapTool Optimize JPG uninstalled
+echo DrapTool Edit MP4 uninstalled
+echo DrapTool Optimize MP4 uninstalled
 echo DrapTool ANYtoMP4 uninstalled
 call :faviconremover
 cls
 echo DrapTool Optimize PNG uninstalled
 echo DrapTool Optimize JPG uninstalled
 echo DrapTool Edit MP4 uninstalled
+echo DrapTool Optimize MP4 uninstalled
 echo DrapTool ANYtoMP4 uninstalled
 echo DrapTool Favicon uninstalled
 call :renderremover
@@ -57,6 +65,7 @@ cls
 echo DrapTool Optimize PNG uninstalled
 echo DrapTool Optimize JPG uninstalled
 echo DrapTool Edit MP4 uninstalled
+echo DrapTool Optimize MP4 uninstalled
 echo DrapTool ANYtoMP4 uninstalled
 echo DrapTool Favicon uninstalled
 echo DrapTool Renderer uninstalled
