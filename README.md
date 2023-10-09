@@ -1,30 +1,29 @@
 # DrapTool for Windows
-[![GitHub Release](https://github-basic-badges.herokuapp.com/release/mariosemes/DrapTool.svg)]()
-[![GitHub Download Count](https://github-basic-badges.herokuapp.com/downloads/mariosemes/DrapTool/total.svg)]()
-[![GitHub Issues Open](https://github-basic-badges.herokuapp.com/issues/mariosemes/DrapTool.svg)]()
+![GitHub all releases](https://img.shields.io/github/downloads/mariosemes/DrapTool/total)
+![GitHub issues](https://img.shields.io/github/issues/mariosemes/DrapTool)
 
-Easy image, video optimisation / converting tool + Web Favicon generator for Windows.
+Easy image, video optimization / converting tool + Web Favicon generator for Windows.
 
 
 ## Download for Windows(64-bit) - [Releases page](https://github.com/mariosemes/DrapTool/releases/)
 
 # Features
 
-- [Image Web Optimisation](#image-web-optimisation)
-- [Video Web Optimisation](#video-web-optimisation)
+- [Image Web Optimization](#image-web-optimisation)
+- [Video Web Optimization](#video-web-optimisation)
 - [Video Converter](#video-converter)
 - [Web Favicon Generator](#web-favicon-generator)
 - [AE Render.exe Tool](#aerenderexe-tool)
 
 
 [back to top](#features)
-# Image Web Optimisation
+# Image Web Optimization
 ##### Compress Single or Batch JPG/PNG files with 1 click.
 
 ![optimisation](https://github.com/mariosemes/DrapTool/blob/master/Images/pngexp.gif?raw=true)
 
 [back to top](#features)
-# Video Web Optimisation
+# Video Web Optimization
 ##### Compress MP4 videos to web perfect quality
 
 ![optimisation](https://github.com/mariosemes/DrapTool/blob/master/Images/mp4opti.gif?raw=true)
